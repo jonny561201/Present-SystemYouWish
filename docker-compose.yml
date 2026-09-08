@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  postgres_db:
+    image: "postgres:16-alpine"
+    container_name: "postgres-you-wish-system"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=system_you_wish
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 2s
+
+  flyway:
+    image: "flyway/flyway:11-alpine"
+    container_name: "flyway-you-wish"
+    command: >
+      -url=jdbc:postgresql://postgres_db:5432/system_you_wish
+      -user=postgres
+      -password=password
+      -connectRetries=10
+      -locations=filesystem:/flyway/sql
+      migrate
+    volumes:
+      - ./docker/flyway/migration:/flyway/sql
+    depends_on:
+      - postgres_db
