@@ -23,9 +23,8 @@ services:
       -user=postgres
       -password=password
       -connectRetries=10
-      -locations=filesystem:/flyway/sql
       migrate
     volumes:
-      - ./docker/flyway/migration:/flyway/sql
+      - "./infra/migrations:/flyway/sql"
     depends_on:
       - postgres_db
