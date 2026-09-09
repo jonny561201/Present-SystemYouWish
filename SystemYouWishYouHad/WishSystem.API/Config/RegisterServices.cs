@@ -1,6 +1,6 @@
-using System.API.Services;
+using WishSystem.API.Services;
 
-namespace System.API.Config;
+namespace WishSystem.API.Config;
 
 public static class RegisterServices
 {

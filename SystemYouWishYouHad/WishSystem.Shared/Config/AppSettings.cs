@@ -1,10 +1,10 @@
-namespace System.Shared.Config;
+namespace WishSystem.Shared.Config;
 
 public record AppSettings
 {
     public string Environment { get; init; }
     public string[] AllowedOrigins { get; init; }
-    public UserDatabase UsersDb { get; init; } = new UserDatabase();
+    public UserDatabase UserDatabase { get; init; } = new UserDatabase();
 }
 
 public record UserDatabase

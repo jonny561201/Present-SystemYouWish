@@ -1,4 +1,4 @@
-﻿namespace System.Data.Models;
+﻿namespace WishSystem.Data.Models;
 
 public partial class User
 {

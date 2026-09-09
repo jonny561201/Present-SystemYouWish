@@ -1,9 +1,9 @@
-using System.Shared.Config;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
+using WishSystem.Shared.Config;
 
-namespace System.Data.Config;
+namespace WishSystem.Data.Config;
 
 public static class SystemYouWishConfig
 {
@@ -11,11 +11,11 @@ public static class SystemYouWishConfig
     {
         var test = new NpgsqlConnectionStringBuilder
         {
-            Host = settings.UsersDb.Host, 
-            Port = settings.UsersDb.Port,
-            Database = settings.UsersDb.Name,
-            Username = settings.UsersDb.Username,
-            Password = settings.UsersDb.Password,
+            Host = settings.UserDatabase.Host, 
+            Port = settings.UserDatabase.Port,
+            Database = settings.UserDatabase.Name,
+            Username = settings.UserDatabase.Username,
+            Password = settings.UserDatabase.Password,
         };
         Console.WriteLine(test.ToString());
         

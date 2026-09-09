@@ -1,7 +1,7 @@
-﻿using System.Data.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using WishSystem.Data.Models;
 
-namespace System.Data.Config;
+namespace WishSystem.Data.Config;
 
 public partial class SystemYouWishContext : DbContext
 {

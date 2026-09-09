@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace System.Data.Models;
+namespace WishSystem.Data.Models;
 
 public class UserConfig : IEntityTypeConfiguration<User>
 {

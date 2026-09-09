@@ -1,7 +1,7 @@
-using System.API.Models;
-using System.Data.Config;
+using WishSystem.API.Models;
+using WishSystem.Data.Config;
 
-namespace System.API.Services;
+namespace WishSystem.API.Services;
 
 public interface IUserService
 {

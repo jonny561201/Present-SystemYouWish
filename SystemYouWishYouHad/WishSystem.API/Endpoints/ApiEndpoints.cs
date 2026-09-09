@@ -1,11 +1,13 @@
-using System.API.Services;
+using WishSystem.API.Services;
 
-namespace System.API.Endpoints;
+namespace WishSystem.API.Endpoints;
 
 public static class ApiEndpoints
 {
     public static WebApplication RegisterEndpoints(this WebApplication app)
     {
+        app.MapGet("/health", () => "healthy");
+        
         app.MapGet("/users/{id:guid}", (IUserService service, Guid id) =>
         {
             return service.GetUser(id);

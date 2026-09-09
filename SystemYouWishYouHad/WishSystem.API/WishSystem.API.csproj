@@ -11,8 +11,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\System.Shared\System.Shared.csproj" />
-      <ProjectReference Include="..\System.Data\System.Data.csproj" />
+      <ProjectReference Include="..\WishSystem.Shared\WishSystem.Shared.csproj" />
+      <ProjectReference Include="..\WishSystem.Data\WishSystem.Data.csproj" />
     </ItemGroup>
 
 </Project>

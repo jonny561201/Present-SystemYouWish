@@ -1,7 +1,7 @@
-using System.API.Config;
-using System.API.Endpoints;
-using System.Shared.Config;
-using System.Data.Config;
+using WishSystem.API.Config;
+using WishSystem.API.Endpoints;
+using WishSystem.Data.Config;
+using WishSystem.Shared.Config;
 
 var builder = WebApplication.CreateBuilder(args);
 

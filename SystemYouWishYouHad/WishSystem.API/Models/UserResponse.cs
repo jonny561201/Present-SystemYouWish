@@ -1,4 +1,4 @@
-namespace System.API.Models;
+namespace WishSystem.API.Models;
 
 public record UserResponse
 {

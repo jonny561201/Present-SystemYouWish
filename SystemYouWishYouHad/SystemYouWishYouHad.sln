@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.API", "System.API\System.API.csproj", "{CFE31261-E0BE-40AD-8137-2B1098C633A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.API", "WishSystem.API\WishSystem.API.csproj", "{CFE31261-E0BE-40AD-8137-2B1098C633A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Data", "System.Data\System.Data.csproj", "{4127743C-011F-4406-A95D-AF5A008C30C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.Data", "WishSystem.Data\WishSystem.Data.csproj", "{4127743C-011F-4406-A95D-AF5A008C30C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Shared", "System.Shared\System.Shared.csproj", "{E38ACDC0-3362-4E84-815B-26E18BF1C254}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.Shared", "WishSystem.Shared\WishSystem.Shared.csproj", "{E38ACDC0-3362-4E84-815B-26E18BF1C254}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

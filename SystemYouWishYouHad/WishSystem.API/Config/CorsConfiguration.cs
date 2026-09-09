@@ -1,6 +1,6 @@
-using System.Shared.Config;
+using WishSystem.Shared.Config;
 
-namespace System.API.Config;
+namespace WishSystem.API.Config;
 
 public static class CorsConfiguration
 {
