@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace System.Data.Config;
 
-public partial class SystemYouWishConfig : DbContext
+public partial class SystemYouWishContext : DbContext
 {
-    public SystemYouWishConfig() {}
+    public SystemYouWishContext() {}
 
-    public SystemYouWishConfig(DbContextOptions<SystemYouWishConfig> options) : base(options) {}
+    public SystemYouWishContext(DbContextOptions<SystemYouWishContext> options) : base(options) {}
 
 
     public virtual DbSet<User> Users { get; set; }

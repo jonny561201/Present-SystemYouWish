@@ -5,7 +5,7 @@ using Npgsql;
 
 namespace System.Data.Config;
 
-public static class SystemYouWishDbConfig
+public static class SystemYouWishConfig
 {
     public static IServiceCollection ConfigUserDb(this IServiceCollection services, AppSettings settings)
     {
