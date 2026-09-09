@@ -1,4 +1,5 @@
 using System.API.Config;
+using System.API.Endpoints;
 using System.Shared.Config;
 using System.Data.Config;
 
@@ -12,11 +13,11 @@ builder.Services.AddCorsConfig(settings);
 
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
+app.RegisterEndpoints();
 
 app.Run();
