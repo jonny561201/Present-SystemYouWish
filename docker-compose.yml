@@ -23,8 +23,10 @@ services:
       -user=postgres
       -password=password
       -connectRetries=10
+      -locations=filesystem:/flyway/sql,filesystem:/flyway/testdata
       migrate
     volumes:
       - "./infra/migrations:/flyway/sql"
+      - "./infra/TestData:/flyway/testdata"
     depends_on:
       - postgres_db
