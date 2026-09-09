@@ -9,7 +9,7 @@ public static class SystemYouWishConfig
 {
     public static IServiceCollection AddUserDbContext(this IServiceCollection services, AppSettings settings)
     {
-        var test = new NpgsqlConnectionStringBuilder
+        var connection = new NpgsqlConnectionStringBuilder
         {
             Host = settings.UserDatabase.Host, 
             Port = settings.UserDatabase.Port,
@@ -17,9 +17,8 @@ public static class SystemYouWishConfig
             Username = settings.UserDatabase.Username,
             Password = settings.UserDatabase.Password,
         };
-        Console.WriteLine(test.ToString());
         
-        services.AddDbContext<SystemYouWishContext>(options => options.UseNpgsql(test.ConnectionString));
+        services.AddDbContext<SystemYouWishContext>(options => options.UseNpgsql(connection.ConnectionString));
         
         return services;
     }
