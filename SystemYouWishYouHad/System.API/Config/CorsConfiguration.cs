@@ -1,6 +1,6 @@
-using Microsoft.Extensions.DependencyInjection;
+using System.Shared.Config;
 
-namespace SystemAPI.Config;
+namespace System.API.Config;
 
 public static class CorsConfiguration
 {

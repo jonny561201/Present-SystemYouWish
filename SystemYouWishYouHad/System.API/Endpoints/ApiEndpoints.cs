@@ -1,4 +1,4 @@
-namespace SystemAPI.Endpoints;
+namespace System.API.Endpoints;
 
 public static class ApiEndpoints
 {
