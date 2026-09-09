@@ -8,6 +8,11 @@ public static class ApiEndpoints
     {
         app.MapGet("/health", () => "healthy");
         
+        app.MapGet("/users", (IUserService service) =>
+        {
+            return service.GetUsers();
+        });
+        
         app.MapGet("/users/{id:guid}", (IUserService service, Guid id) =>
         {
             return service.GetUser(id);

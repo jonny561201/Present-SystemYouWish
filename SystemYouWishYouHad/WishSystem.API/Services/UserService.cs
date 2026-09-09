@@ -7,6 +7,7 @@ public interface IUserService
 {
     UserResponse? GetUser(Guid userId);
     IEnumerable<UserResponse> SubmitUsers(List<Guid> userIds);
+    IEnumerable<UserResponse> GetUsers();
 }
 
 public class UserService(SystemYouWishContext context) : IUserService
@@ -25,5 +26,10 @@ public class UserService(SystemYouWishContext context) : IUserService
         var users = context.Users.Where(x => userIds.Contains(x.Id));
 
         return users.Select(x => new UserResponse { FamilyName = x.FamilyName, GivenName = x.GivenName, Email =  x.Email, MiddleName = x.MiddleName});
+    }
+
+    public IEnumerable<UserResponse> GetUsers()
+    {
+        return context.Users.Select(x => new UserResponse { FamilyName = x.FamilyName, GivenName = x.GivenName, Email = x.Email, MiddleName = x.MiddleName });
     }
 }
