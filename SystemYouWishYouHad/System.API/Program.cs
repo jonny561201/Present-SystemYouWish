@@ -10,6 +10,7 @@ var settings = builder.Configuration.Get<AppSettings>();
 builder.Services.AddOpenApi();
 builder.Services.ConfigUserDb(settings);
 builder.Services.AddCorsConfig(settings);
+builder.Services.AddServices();
 
 var app = builder.Build();
 
