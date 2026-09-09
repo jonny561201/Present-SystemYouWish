@@ -7,7 +7,7 @@ namespace System.Data.Config;
 
 public static class SystemYouWishConfig
 {
-    public static IServiceCollection ConfigUserDb(this IServiceCollection services, AppSettings settings)
+    public static IServiceCollection AddUserDbContext(this IServiceCollection services, AppSettings settings)
     {
         var test = new NpgsqlConnectionStringBuilder
         {
@@ -17,6 +17,7 @@ public static class SystemYouWishConfig
             Username = settings.UsersDb.Username,
             Password = settings.UsersDb.Password,
         };
+        Console.WriteLine(test.ToString());
         
         services.AddDbContext<SystemYouWishContext>(options => options.UseNpgsql(test.ConnectionString));
         
