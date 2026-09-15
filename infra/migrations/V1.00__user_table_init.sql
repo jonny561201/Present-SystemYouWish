@@ -3,5 +3,6 @@ CREATE TABLE users (
     given_name TEXT NOT NULL,
     middle_name TEXT NULL,
     family_name TEXT NOT NULL,
-    email TEXT NOT NULL
+    email TEXT NOT NULL,
+    date_of_birth DATE NOT NULL
 );

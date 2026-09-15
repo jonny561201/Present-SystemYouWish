@@ -7,4 +7,5 @@ public partial class User
     public string? MiddleName { get; set; }
     public string FamilyName { get; set; } = null!;
     public string Email { get; set; } = null!;
+    public DateTime DateOfBirth { get; set; }
 }

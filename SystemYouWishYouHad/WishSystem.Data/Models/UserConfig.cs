@@ -18,5 +18,6 @@ public class UserConfig : IEntityTypeConfiguration<User>
         builder.Property(e => e.FamilyName).HasColumnName("family_name");
         builder.Property(e => e.GivenName).HasColumnName("given_name");
         builder.Property(e => e.MiddleName).HasColumnName("middle_name");
+        builder.Property(e => e.DateOfBirth).HasColumnName("date_of_birth");
     }
 }
