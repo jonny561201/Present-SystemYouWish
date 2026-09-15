@@ -1,6 +1,7 @@
 using WishSystem.API.Config;
 using WishSystem.API.Endpoints;
 using WishSystem.Data.Config;
+using WishSystem.External.Config;
 using WishSystem.Shared.Config;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddCorsConfig(settings);
 builder.Services.AddUserDbContext(settings);
 builder.Services.AddServices();
+builder.Services.AddExternalClients();
 
 var app = builder.Build();
 

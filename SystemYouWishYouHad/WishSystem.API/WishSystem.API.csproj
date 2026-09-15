@@ -11,6 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\WishSystem.External\WishSystem.External.csproj" />
       <ProjectReference Include="..\WishSystem.Shared\WishSystem.Shared.csproj" />
       <ProjectReference Include="..\WishSystem.Data\WishSystem.Data.csproj" />
     </ItemGroup>
