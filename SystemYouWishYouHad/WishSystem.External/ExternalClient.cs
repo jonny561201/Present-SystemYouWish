@@ -17,6 +17,8 @@ public class ExternalClient(HttpClient httpClient) : IExternalClient
         response.EnsureSuccessStatusCode();
         
         var content =  await response.Content.ReadFromJsonAsync<ExternalResponse>();
+        
+        Console.WriteLine("----- Submitted Successfully -----");
 
         return content?.Data ?? new List<Guid>();
     }
