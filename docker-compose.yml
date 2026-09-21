@@ -30,3 +30,9 @@ services:
       - "./infra/TestData:/flyway/testdata"
     depends_on:
       - postgres_db
+        
+  sqs_queue:
+    image: softwaremill/elasticmq-native
+    ports:
+      - "9324:9324" # SQS API Endpoint
+      - "9325:9325" # Optional Web UI for queue management
