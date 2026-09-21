@@ -8,8 +8,6 @@ public static class ApiEndpoints
     {
         app.MapGet("/users", (IUserService service) => service.GetUsers());
         
-        app.MapGet("/users/{id:guid}", (IUserService service, Guid id) => service.GetUser(id));
-        
         app.MapPost("/users/submit", (IUserService service, List<Guid> userId) => service.SubmitUsers(userId));
         
         return app;
