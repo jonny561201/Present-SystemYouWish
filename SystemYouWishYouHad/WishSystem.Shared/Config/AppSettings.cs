@@ -26,5 +26,5 @@ public record BaseEndPoints
 public record Sqs
 {
     public required string ServiceUrl { get; init; }
-    public required string QueueName { get; init; }
+    public required string QueueUrl { get; init; }
 }
