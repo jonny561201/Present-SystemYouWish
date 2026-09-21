@@ -1,4 +1,4 @@
-﻿using WishSystem.Data.Config;
+using WishSystem.Data.Config;
 using WishSystem.External;
 using WishSystem.Shared.Models;
 

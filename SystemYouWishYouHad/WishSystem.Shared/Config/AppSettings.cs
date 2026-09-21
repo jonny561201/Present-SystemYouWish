@@ -1,4 +1,4 @@
-﻿namespace WishSystem.Shared.Config;
+namespace WishSystem.Shared.Config;
 
 public record AppSettings
 {

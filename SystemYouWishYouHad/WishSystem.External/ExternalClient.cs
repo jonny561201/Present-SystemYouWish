@@ -16,7 +16,7 @@ public class ExternalClient(HttpClient httpClient) : IExternalClient
         var response = await httpClient.PostAsJsonAsync("post", users);
 
         response.EnsureSuccessStatusCode();
-
+        
         Console.WriteLine("----- Submitted Successfully -----");
     }
 }

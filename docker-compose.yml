@@ -30,7 +30,7 @@ services:
       - "./infra/TestData:/flyway/testdata"
     depends_on:
       - postgres_db
-        
+
   sqs_queue:
     image: softwaremill/elasticmq-native
     ports:
