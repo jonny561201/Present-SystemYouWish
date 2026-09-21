@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.Shared", "WishSy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.External", "WishSystem.External\WishSystem.External.csproj", "{0FA90938-386A-4A4E-95EE-82A397E008E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WishSystem.Lambda", "WishSystem.Lambda\WishSystem.Lambda.csproj", "{F265F775-4E65-4CA8-8473-092D044FD073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWatcher", "QueueWatcher\QueueWatcher.csproj", "{F1C24CDE-BB84-42F7-BD82-DDF726E5D8E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{0FA90938-386A-4A4E-95EE-82A397E008E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FA90938-386A-4A4E-95EE-82A397E008E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FA90938-386A-4A4E-95EE-82A397E008E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F265F775-4E65-4CA8-8473-092D044FD073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F265F775-4E65-4CA8-8473-092D044FD073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F265F775-4E65-4CA8-8473-092D044FD073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F265F775-4E65-4CA8-8473-092D044FD073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C24CDE-BB84-42F7-BD82-DDF726E5D8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C24CDE-BB84-42F7-BD82-DDF726E5D8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C24CDE-BB84-42F7-BD82-DDF726E5D8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C24CDE-BB84-42F7-BD82-DDF726E5D8E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
