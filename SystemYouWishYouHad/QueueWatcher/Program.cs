@@ -71,7 +71,7 @@ while (!cancellation.IsCancellationRequested)
 
         try
         {
-            function.Handler(sqsEvent, new LocalLambdaContext());
+            await function.Handler(sqsEvent, new LocalLambdaContext());
         }
         catch (Exception ex)
         {
