@@ -18,7 +18,6 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 
-app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.RegisterEndpoints();
 
