@@ -5,6 +5,7 @@ public record AppSettings
     public required string Environment { get; init; }
     public string[] AllowedOrigins { get; init; } = [];
     public required UserDatabase UserDatabase { get; init; }
+    public required BaseEndpoints BaseEndpoints { get; init; }
 }
 
 public record UserDatabase
@@ -14,4 +15,9 @@ public record UserDatabase
     public required int Port { get; init; }
     public required string Username { get; init; }
     public required string Password { get; init; }
+}
+
+public record BaseEndpoints
+{
+    public required string Submit { get; init; }
 }
