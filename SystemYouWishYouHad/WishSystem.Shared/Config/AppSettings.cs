@@ -2,8 +2,6 @@ namespace WishSystem.Shared.Config;
 
 public record AppSettings
 {
-    public required string Environment { get; init; }
-    public string[] AllowedOrigins { get; init; } = [];
     public required UserDatabase UserDatabase { get; init; }
     public required BaseEndpoints BaseEndpoints { get; init; }
     public required Sqs Sqs { get; init; }
