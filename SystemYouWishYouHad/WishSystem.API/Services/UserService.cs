@@ -13,13 +13,13 @@ public interface IUserService
 public class UserService(SystemYouWishContext context, IExternalClient client) : IUserService
 {
 
-    public async Task<List<Guid>> SubmitUsers(List<Guid> userIds)
+    public async Task SubmitUsers(List<Guid> userIds)
     {
         var users = context.Users.Where(x => userIds.Contains(x.Id));
 
         var updatedUsers = users.Select(x => x.Id).ToList();
 
-        return await client.Submit(updatedUsers);
+        await client.Submit(updatedUsers);
     }
 
     public IEnumerable<UserResponse> GetUsers()
