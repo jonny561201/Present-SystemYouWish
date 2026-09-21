@@ -12,7 +12,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddCorsConfig(settings);
 builder.Services.AddUserDbContext(settings);
 builder.Services.AddServices();
-builder.Services.AddExternalClients();
+builder.Services.AddExternalClients(settings);
 
 var app = builder.Build();
 
