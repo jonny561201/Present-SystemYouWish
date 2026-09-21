@@ -1,16 +1,19 @@
 ﻿using System.Net.Http.Json;
+using System.Text.Json;
+using Amazon.SQS;
+using WishSystem.Shared.Config;
 using WishSystem.External.Model;
 
 namespace WishSystem.External;
 
 public interface IExternalClient
 {
-    Task<IEnumerable<Guid>> Submit(IEnumerable<Guid> users);
+    Task<List<Guid>> Submit(List<Guid> users);
 }
 
 public class ExternalClient(HttpClient httpClient) : IExternalClient
 {
-    public async Task<IEnumerable<Guid>> Submit(IEnumerable<Guid> users)
+    public async Task<List<Guid>> Submit(List<Guid> users)
     {
         var response = await httpClient.PostAsJsonAsync("post", users);
 
