@@ -1,4 +1,4 @@
-using WishSystem.Data.Config;
+﻿using WishSystem.Data.Config;
 using WishSystem.External;
 using WishSystem.Shared.Models;
 
@@ -6,21 +6,12 @@ namespace WishSystem.API.Services;
 
 public interface IUserService
 {
-    UserResponse? GetUser(Guid userId);
-    Task<List<Guid>> SubmitUsers(List<Guid> userIds);
+    Task SubmitUsers(List<Guid> userIds);
     IEnumerable<UserResponse> GetUsers();
 }
 
 public class UserService(SystemYouWishContext context, IExternalClient client) : IUserService
 {
-    public UserResponse? GetUser(Guid userId)
-    {
-        var user = context.Users.FirstOrDefault(x => x.Id == userId);
-        
-        return user == null 
-            ? null 
-            : new UserResponse { Id =user.Id, FamilyName = user.FamilyName, GivenName = user.GivenName, Email =  user.Email, MiddleName = user.MiddleName };
-    }
 
     public async Task<List<Guid>> SubmitUsers(List<Guid> userIds)
     {
