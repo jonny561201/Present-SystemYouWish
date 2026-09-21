@@ -26,3 +26,17 @@ public class ExternalClient(HttpClient httpClient) : IExternalClient
         return content?.Data ?? new List<Guid>();
     }
 }
+
+public class SqsExternalClient(IAmazonSQS sqs, AppSettings settings) : IExternalClient
+{
+    public async Task<List<Guid>> Submit(List<Guid> users)
+    {
+        var queueUrl = (await sqs.CreateQueueAsync(settings.Sqs.QueueName)).QueueUrl;
+
+        await sqs.SendMessageAsync(queueUrl, JsonSerializer.Serialize(users));
+
+        Console.WriteLine("----- Queued Successfully -----");
+        
+        return users;
+    }
+}
