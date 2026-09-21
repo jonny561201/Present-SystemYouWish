@@ -6,19 +6,19 @@ namespace WishSystem.API.Services;
 
 public interface IUserService
 {
-    Task<IEnumerable<Guid>> SubmitUsers(List<Guid> userIds);
+    Task SubmitUsers(List<Guid> userIds);
     IEnumerable<UserResponse> GetUsers();
 }
 
 public class UserService(SystemYouWishContext context, IExternalClient client) : IUserService
 {
-    public async Task<IEnumerable<Guid>> SubmitUsers(List<Guid> userIds)
+    public async Task SubmitUsers(List<Guid> userIds)
     {
         var users = context.Users.Where(x => userIds.Contains(x.Id));
 
         var updatedUsers = users.Select(x => x.Id);
 
-        return await client.Submit(updatedUsers);
+        await client.Submit(updatedUsers);
     }
 
     public IEnumerable<UserResponse> GetUsers()
