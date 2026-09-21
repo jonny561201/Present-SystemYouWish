@@ -5,7 +5,7 @@ public record AppSettings
     public required string Environment { get; init; }
     public string[] AllowedOrigins { get; init; } = [];
     public required UserDatabase UserDatabase { get; init; }
-    public required BaseEndPoints BaseEndPoints { get; init; }
+    public required BaseEndpoints BaseEndpoints { get; init; }
     public required Sqs Sqs { get; init; }
 }
 
@@ -18,7 +18,7 @@ public record UserDatabase
     public required string Password { get; init; }
 }
 
-public record BaseEndPoints
+public record BaseEndpoints
 {
     public required string Submit { get; init; }
 }
