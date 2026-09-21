@@ -12,7 +12,6 @@ public interface IUserService
 
 public class UserService(SystemYouWishContext context, IExternalClient client) : IUserService
 {
-
     public async Task SubmitUsers(List<Guid> userIds)
     {
         var users = context.Users.Where(x => userIds.Contains(x.Id));
