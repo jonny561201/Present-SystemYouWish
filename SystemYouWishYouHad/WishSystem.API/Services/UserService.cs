@@ -16,7 +16,7 @@ public class UserService(SystemYouWishContext context, IExternalClient client) :
     {
         var users = context.Users.Where(x => userIds.Contains(x.Id));
 
-        var updatedUsers = users.Select(x => x.Id);
+        var updatedUsers = users.Select(x => x.Id).ToList();
 
         await client.Submit(updatedUsers);
     }
