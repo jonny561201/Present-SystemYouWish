@@ -11,7 +11,7 @@ var settings = builder.Configuration.Get<AppSettings>();
 builder.Services.AddOpenApi();
 builder.Services.AddUserDbContext(settings);
 builder.Services.AddServices();
-builder.Services.AddExternalClients(settings);
+builder.Services.AddExternalSqsClients(settings);
 
 var app = builder.Build();
 
